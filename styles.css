@@ -50,7 +50,7 @@ header {
 
 .btn{
     max-width: 120px;
-    width: 20%;
+    width:15%;
     border: 5px solid black;
     height: 5rem;
     display: flex;
@@ -110,6 +110,15 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 
+}
+
+.download{
+    outline: none;
+    background-color: white;
+    background-image: url('assets/download.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 600px) {

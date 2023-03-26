@@ -11,9 +11,12 @@ const clear = document.getElementById('clear')
 const plus = document.querySelector('.plus')
 const minus = document.querySelector('.minus')
 const eraser = document.getElementById('eraser')
+const downloadBtn = document.getElementById('download')
 
 canvas.width = window.innerWidth - 100
 canvas.height = window.innerHeight - 250
+c.fillStyle = 'white'
+c.fillRect(0,0, canvas.width, canvas.height)
 
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth - 100
@@ -119,4 +122,11 @@ btn.forEach(button => {
     })
 })
 
+downloadBtn.addEventListener('click', () => {
+    let a = document.createElement('a')
+    let URL = canvas.toDataURL()
+    a.setAttribute('download', 'myPainting.jpg')
+    a.setAttribute('href', `${URL}`)
+    a.click()
+})
 
